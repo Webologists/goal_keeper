@@ -9,6 +9,11 @@ const app = Vue.createApp({
       checkVar: false
     };
   },
+  computed: {
+    clicked() {
+      return true
+    },
+  },
   methods: {
     addGoal() {
       this.goals.push(this.enteredGoalValue);
