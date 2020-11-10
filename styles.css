@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #bc5ff1;
+}
+
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #52057b;
+  color: white;
+  text-align: center;
+}
+
+#user-goals {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #892cdc;
+}
+
+#user-goals h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #000000;
+  color: #52057b;
+  margin: 0 0 1rem 0;
+}
+
+#user-goals ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+#user-goals li {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #bc5ff1;
+  padding: 0.5rem;
+  color: #000000;
+  border-radius: 25px;
+}
+
+#user-goals input {
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#user-goals input:focus {
+  outline: none;
+  border-color: #52057b;
+  background-color: #f7cdf8;
+}
+
+#user-goals button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #52057b;
+  background-color: #52057b;
+  color: white;
+  padding: 0.05rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+}
+
+#user-goals button:hover,
+#user-goals button:active {
+  background-color: #bc5ff1;
+  border-color: #bc5ff1;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
+
+hr{
+  margin-top: 14px;
+  border-style: none;
+  border-top: 6px dotted gray;
+  width: 15%;
+}
+
+#infoLists li{
+  display: inline-block;
+  margin: auto 20px;
+}
+
+#twoInputDiv input{
+  display: inline-block;
+  margin: auto 10px;
+}
+
+#print-button {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #892cdc;
+}
+
+#print-button button img {
+  height: 30px;
+}
+
+#print-button button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #52057b;
+  background-color: #52057b;
+  color: white;
+  padding: 0.05rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+}
+
+#print-button button:hover,
+#print-button button:active {
+  background-color: #bc5ff1;
+  border-color: #bc5ff1;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}

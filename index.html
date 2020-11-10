@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purple Palette Vue Built Goal Keeper</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Vue Built Goal Definer and Keeper
+        <img
+          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/60/emojipedia/91/gloves_1f9e4.png"
+          alt="gloves"
+        />
+      </h1>
+    </header>
+    <div id="user-goals">
+      <section>
+        <div id="twoInputDiv" v-if="!checkVar">
+          <h2>A little bit about you!</h2>
+          <input type="text" placeholder="Your name" v-model="name"/>
+          <input type="text" placeholder="Your age" v-model="age"/><br /><br />
+          <button @click="addInfo">Yep, that's me!</button>
+        </div>
+        <ul id="infoLists" v-if="checkVar">
+          <li>I am {{ name }}</li>
+          <li>{{ age }} y.o.</li>
+        </ul>
+        <hr v-if="checkVar"/>
+      </section>
+      <section v-if="checkVar">
+        <h2>My goals</h2>
+        <input type="text" v-model="enteredGoalValue" />
+        <button @click="addGoal">Add Goal</button>
+        <p v-if="goals.length === 0">
+          No goals have been added yet - please start adding some!
+        </p>
+        <ul>
+          <!-- 
+        v-show is useful when the state of visibility of some element changes a lot
+        and you don't want to remove them from the DOM!!!
+        <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p>
+      <ul v-show="goals.length > 0"> -->
+          <li
+            v-for="(goal , index) in goals"
+            :key="goal"
+            @click="removeGoal(index)"
+          >
+            <p>{{ index + 1 }}. {{ goal }}</p>
+            <input type="text" placeholder="Add note!" @click.stop />
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div id="print-button">
+      <button onclick="window.print()">Print the page <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/printer_1f5a8-fe0f.png" alt="printer"></button>
+    </div>
+  </body>
+</html>
