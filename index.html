@@ -61,7 +61,7 @@
       </section>
     </div>
     <div id="print-button">
-      <button onclick="window.print()">Print the page <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/printer_1f5a8-fe0f.png" alt="printer"></button>
+      <button onclick="window.print()" v-show="!clicked" @click="clicked">Print the page <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/printer_1f5a8-fe0f.png" alt="printer"></button>
     </div>
   </body>
 </html>
